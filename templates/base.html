@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<style>
+    .register{
+        text-decoration: none;
+        color: blue;
+    }
+    .signin{
+        text-decoration: none;
+        color: blue;
+    }
+    .h2{
+        color: aqua;
+    }
+</style>
+<body>
+    <a href="{% url 'register' %}" class="register">Register</a>
+    <a href="{% url 'signin' %}" class="signin">Signin</a>
+    {% block content %}
+
+    {% endblock content %}
+</body>
+</html>
